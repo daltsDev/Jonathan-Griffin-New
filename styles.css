@@ -275,7 +275,7 @@
 
 .mouse-down-container {
   padding: 100px 0 50px 0;
-  bottom: 0;
+  bottom: -20px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -781,7 +781,7 @@
 }
 .main-cta {
   position: relative;
-  top: 12%;
+  top: 10%;
 }
 .research__Contact > a {
   padding: 1rem 1.5rem;
