@@ -130,6 +130,7 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 50;
 }
 .back-to-top-container:hover {
   cursor: pointer;
@@ -1309,7 +1310,7 @@
 .contact__h1 {
   margin: 2rem 15px;
   font-size: 40px;
-  max-width: 330px;
+  max-width: 360px;
   text-align: start;
   color: #fff;
   word-spacing: 5px;

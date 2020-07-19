@@ -1,9 +1,18 @@
+import timeline from './timeline/js/timeline.js';
 // Hamburger Menu Javscript
 const navTriggerEl = document.querySelector('.hamburger');
 const navEl = document.querySelector('nav');
 const ContentEl = document.querySelector('.content');
 const hamburgerBarsEl = document.getElementsByTagName('span');
-import timeline from './timeline/js/timeline.js';
+const accordionItemsEl = document.getElementsByClassName('accordion__item');
+const readMoreEl = document.getElementsByClassName('experience__read_more');
+const modalTriggerEl = document.querySelectorAll('.modal-trigger');
+//Get Elements
+const modalEl = document.querySelector('.modal');
+const modalDateEl = document.querySelector('.modal_exper-date');
+const modalTitleEl = document.querySelector('.modal_exper-title');
+const modalContentEl = document.querySelector('.modal_exper-content');
+const Year = document.getElementById('footerYear');
 
 function toggleNav() {
   navTriggerEl.addEventListener('click', function () {
@@ -29,7 +38,6 @@ timeline(document.querySelectorAll('#timeline-vertical'), {
 });
 
 // Accordian javascript
-let accordionItemsEl = document.getElementsByClassName('accordion__item');
 
 function accordion() {
   for (let item of accordionItemsEl) {
@@ -52,10 +60,6 @@ accordion();
 
 // Experience Page Read More Read Less
 
-let readMoreEl = document.getElementsByClassName('experience__read_more');
-let hiddenText = document.querySelector('.experience__hidden');
-let experienceDots = document.querySelector('.experience__dots');
-
 function readMore() {
   for (let items of readMoreEl) {
     let readMoreText = items;
@@ -77,18 +81,6 @@ function readMore() {
 }
 
 readMore();
-// Experience Modal
-
-const modalTriggerEl = document.querySelectorAll('.modal-trigger');
-//Get Elements
-const modalEl = document.querySelector('.modal');
-const modalDateEl = document.querySelector('.modal_exper-date');
-const modalTitleEl = document.querySelector('.modal_exper-title');
-const modalContentEl = document.querySelector('.modal_exper-content');
-
-modalTriggerEl.forEach((el) => {
-  el.addEventListener('click', handleModalTigger);
-});
 
 function handleModalTigger(e) {
   // Get Content
@@ -107,15 +99,6 @@ function handleModalTigger(e) {
 function closeModal() {
   modalEl.classList.remove('open');
 }
-modalEl.addEventListener('click', function (e) {
-  const isOutside = e.target.closest('.modal-inner');
-  !isOutside ? closeModal() : null;
-});
-window.addEventListener('keyup', function (e) {
-  e.key === 'Escape' ? closeModal() : null;
-});
-
-const Year = document.getElementById('footerYear');
 
 (function updateFooterYear() {
   const year = new Date().getFullYear();
@@ -149,6 +132,19 @@ function scrollToTop() {
     backToTopEl.style.display = 'none';
   }
 }
+scrollToTop();
 
 window.addEventListener('scroll', debounce(scrollToTop));
-scrollToTop();
+
+modalTriggerEl.forEach((el) => {
+  el.addEventListener('click', handleModalTigger);
+});
+
+modalEl.addEventListener('click', function (e) {
+  const isOutside = e.target.closest('.modal-inner');
+  !isOutside ? closeModal() : null;
+});
+
+window.addEventListener('keyup', function (e) {
+  e.key === 'Escape' ? closeModal() : null;
+});
