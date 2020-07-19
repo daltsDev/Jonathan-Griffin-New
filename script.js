@@ -5,6 +5,19 @@ const ContentEl = document.querySelector('.content');
 const hamburgerBarsEl = document.getElementsByTagName('span');
 import timeline from './timeline/js/timeline.js';
 
+function toggleNav() {
+  navTriggerEl.addEventListener('click', function () {
+    navEl.classList.toggle('open');
+    animateHamburgers();
+  });
+}
+toggleNav();
+function animateHamburgers() {
+  for (let item of hamburgerBarsEl) {
+    item.classList.toggle('change');
+  }
+}
+
 timeline(document.querySelectorAll('#timeline-horizontal'), {
   forceVerticalMode: 800,
   mode: 'horizontal',
@@ -14,19 +27,6 @@ timeline(document.querySelectorAll('#timeline-vertical'), {
   verticalStartPosition: 'right',
   verticalTrigger: '150px',
 });
-
-function toggleNav() {
-  navTriggerEl.addEventListener('click', function () {
-    navEl.classList.toggle('open');
-    animateHamburgers();
-  });
-}
-function animateHamburgers() {
-  for (let item of hamburgerBarsEl) {
-    item.classList.toggle('change');
-  }
-}
-toggleNav();
 
 // Accordian javascript
 let accordionItemsEl = document.getElementsByClassName('accordion__item');
