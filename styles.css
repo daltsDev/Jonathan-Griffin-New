@@ -2020,4 +2020,8 @@
   .container {
     background-position: 50% 0%;
   }
+
+  .consultancy_background-showcase {
+    background-position-y: 10%;
+  }
 }
