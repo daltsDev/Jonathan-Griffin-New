@@ -244,19 +244,23 @@
 /**** hamburger icon ****/
 /**** Home Content ****/
 .showcase {
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('./assets/images/Optimized-mountains.jpg') no-repeat center center/cover;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 06)), to(rgba(0, 0, 0, 0.45))), url('./assets/images/Optimized-mountains.jpg') no-repeat center center/cover;
-  background: linear-gradient(57.96deg, #000000 5.89%, rgba(0, 0, 0, 0.4) 27.98%), url('./assets/images/Optimized-mountains.jpg') no-repeat center center/cover;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('./assets/images/Optimized-mountains-mobile.jpg') no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 06)), to(rgba(0, 0, 0, 0.45))), url('./assets/images/Optimized-mountains-mobile.jpg') no-repeat center center/cover;
+  background: linear-gradient(57.96deg, #000000 5.89%, rgba(0, 0, 0, 0.4) 27.98%), url('./assets/images/Optimized-mountains-mobile.jpg') no-repeat center center/cover;
   height: 100vh;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
   background-position: 50% 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .showcase__h1 {
-  position: relative;
-  top: 45px;
+  /* position: relative;
+  top: 45px; */
   color: white;
   font-weight: 800;
   font-size: 2.2rem;
@@ -264,8 +268,8 @@
 }
 
 .showcase__p {
-  position: relative;
-  top: 90px;
+  /* position: relative;
+  top: 90px; */
   color: white;
   margin: 0 20px;
   text-align: center;
@@ -276,10 +280,10 @@
 
 .mouse-down-container {
   padding: 100px 0 50px 0;
-  bottom: -20px;
+  /* bottom: -20px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 .mouse-down {
   display: block;
@@ -458,10 +462,10 @@
 /* ABOUT Page */
 
 .about__body {
-  background: -o-linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt.png') no-repeat center center/cover;
-  background: -o-linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt.png') no-repeat center center/cover;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(60, 211, 173, 0.75)), to(rgba(76, 184, 196, 0.75))), url('./assets/images/Profile2_Opt.png') no-repeat center center/cover;
-  background: linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt.png') no-repeat center center/cover;
+  background: -o-linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt-mobile.png') no-repeat center center/cover;
+  background: -o-linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt-mobile.png') no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(60, 211, 173, 0.75)), to(rgba(76, 184, 196, 0.75))), url('./assets/images/Profile2_Opt-mobile.png') no-repeat center center/cover;
+  background: linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt-mobile.png') no-repeat center center/cover;
   min-height: 925px;
   width: 100%;
   background-position: 50% 32% !important;
@@ -781,8 +785,8 @@
   margin: 4rem auto 0 auto;
 }
 .main-cta {
-  position: relative;
-  top: 10%;
+  /* position: relative;
+  top: 10%; */
 }
 .research__Contact > a {
   padding: 1rem 1.5rem;
@@ -1130,7 +1134,7 @@
   justify-content: space-around;
 }
 .consultancy_background-showcase {
-  background: url('./assets/consultancy/consultancyPara.png') no-repeat center center/cover;
+  background: url('./assets/consultancy/consultancyPara-mobile.png') no-repeat center center/cover;
   width: 100%;
   height: fit-content;
   margin: 2rem 0;
@@ -1174,15 +1178,6 @@
   position: absolute;
   bottom: -20px;
   right: 0;
-}
-.consultancy_para {
-  min-width: 100%;
-  height: 650px;
-  background: url('./assets/consultancy/consultancyPara.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .consult__Card {
@@ -1294,9 +1289,10 @@
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
 .consult-background {
   margin-top: 3.5rem;
-  background: url('./assets/consultancy/consult-contact.png') no-repeat center center/cover;
+  background: url('./assets/consultancy/consult-contact-mobile.png') no-repeat center center/cover;
   height: 550px;
   background-position-y: 10%;
 }
@@ -1449,14 +1445,17 @@
     font-size: 25px !important;
   }
   .showcase {
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('./assets/images/Optimized-mountains.jpg') no-repeat center center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 06)), to(rgba(0, 0, 0, 0.45))), url('./assets/images/Optimized-mountains.jpg') no-repeat center center/cover;
+    background: linear-gradient(57.96deg, #000000 5.89%, rgba(0, 0, 0, 0.4) 27.98%), url('./assets/images/Optimized-mountains.jpg') no-repeat center center/cover;
     background-size: cover;
   }
   .showcase__h1 {
     font-size: 55px;
-    top: 60px;
+    /* top: 60px; */
   }
   .showcase__p {
-    top: 130px;
+    /* top: 130px; */
   }
   .miniAbout__section {
     max-width: 750px;
@@ -1474,6 +1473,10 @@
     top: 20%;
   }
   .about__body {
+    background: -o-linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt.png') no-repeat center center/cover;
+    background: -o-linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt.png') no-repeat center center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(60, 211, 173, 0.75)), to(rgba(76, 184, 196, 0.75))), url('./assets/images/Profile2_Opt.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(60, 211, 173, 0.75), rgba(76, 184, 196, 0.75)), url('./assets/images/Profile2_Opt.png') no-repeat center center/cover;
     min-height: 650px;
   }
   .about__LinksButton1 {
@@ -1496,6 +1499,13 @@
   .consult__Card {
     width: 200px;
     height: 260px;
+  }
+  .consultancy_background-showcase {
+    background: url('./assets/consultancy/consultancyPara.png') no-repeat center center/cover;
+  }
+  .consult-background {
+    background: url('./assets/consultancy/consult-contact.png') no-repeat center center/cover;
+    background-position-y: 10%;
   }
   .experience__container {
     margin: 0 auto;
@@ -2021,7 +2031,7 @@
     background-position: 50% 0%;
   }
 
-  .consultancy_background-showcase {
+  .consultancy_background-showcase nav__Desktop {
     background-position-y: 10%;
   }
 }

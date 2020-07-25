@@ -6,12 +6,8 @@ const ContentEl = document.querySelector('.content');
 const hamburgerBarsEl = document.getElementsByTagName('span');
 const accordionItemsEl = document.getElementsByClassName('accordion__item');
 const readMoreEl = document.getElementsByClassName('experience__read_more');
-const modalTriggerEl = document.querySelectorAll('.modal-trigger');
+
 //Get Elements
-const modalEl = document.querySelector('.modal');
-const modalDateEl = document.querySelector('.modal_exper-date');
-const modalTitleEl = document.querySelector('.modal_exper-title');
-const modalContentEl = document.querySelector('.modal_exper-content');
 const Year = document.getElementById('footerYear');
 
 function toggleNav() {
@@ -27,11 +23,6 @@ function animateHamburgers() {
   }
 }
 
-timeline(document.querySelectorAll('#timeline-horizontal'), {
-  forceVerticalMode: 800,
-  mode: 'horizontal',
-  visibleItems: 3,
-});
 timeline(document.querySelectorAll('#timeline-vertical'), {
   verticalStartPosition: 'right',
   verticalTrigger: '150px',
@@ -81,24 +72,6 @@ function readMore() {
 }
 
 readMore();
-
-function handleModalTigger(e) {
-  // Get Content
-  const mainDiv = e.target.offsetParent;
-  const date = mainDiv.children[0].innerText;
-  const title = mainDiv.children[1].innerText;
-  const content = mainDiv.children[2].innerText;
-
-  // Replace Mondal Content
-  modalDateEl.innerHTML = date;
-  modalTitleEl.innerHTML = title;
-  modalContentEl.innerHTML = content;
-  modalEl.classList.add('open');
-}
-
-function closeModal() {
-  modalEl.classList.remove('open');
-}
 
 (function updateFooterYear() {
   const year = new Date().getFullYear();
