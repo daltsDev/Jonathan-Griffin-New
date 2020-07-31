@@ -24,8 +24,9 @@ function animateHamburgers() {
 }
 
 timeline(document.querySelectorAll('#timeline-vertical'), {
-  verticalStartPosition: 'right',
-  verticalTrigger: '150px',
+  mode: 'horizontal',
+  visibleItems: 2,
+  forceVerticalMode: 800,
 });
 
 // Accordian javascript

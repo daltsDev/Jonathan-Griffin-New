@@ -85,7 +85,8 @@
 }
 .fa-twitter,
 .fa-linkedin,
-.fa-researchgate {
+.fa-researchgate,
+.fa-instagram {
   font-size: 2.5rem;
   color: #fff;
   margin: 0.1rem 1rem 0 1rem;
@@ -1018,94 +1019,39 @@
   cursor: pointer;
   padding: 0.5rem;
 }
-
-.ping {
-  height: 25px;
-  width: 25px;
-  border: 0.5px solid #fff;
-  background-color: #ffffffd9;
-  border-radius: 50%;
-  margin-left: auto;
-  -webkit-animation: ping 1.8s cubic-bezier(0, 0, 1, 1) infinite reverse both;
-  animation: ping 1.8s cubic-bezier(0, 0, 1, 1) infinite reverse both;
+.cv_container-outer {
+  width: 100%;
+  height: 400px;
+  background-color: #f9f9f9;
 }
-.modal-trigger:hover {
-  cursor: pointer;
-}
-.modal {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: cubic-bezier(0, 0, 1, 1) opacity 0.3s;
-}
-.modal-inner {
+.cv_container-inner {
   min-width: 310px;
-  max-width: 600px;
-  max-height: 80%;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
+  max-width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
-  margin: 1rem;
 }
-.modal.open {
-  opacity: 1;
-  pointer-events: all;
+.cv_h3 {
+  color: #2b2b2b;
+  font-size: 2rem;
+  width: 300px;
 }
-.modal_exper-title {
-  margin: 1rem 0;
+.cv_downloadlink {
+  background-color: #2b2b2b;
+  color: #f9f9f9;
+  height: 4rem;
+  width: 25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 4rem;
 }
-
-.modal_exper-content {
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  font-weight: 400;
-  line-height: 1.2rem;
-  margin: 0.5rem 0;
-}
-@-webkit-keyframes ping {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-    opacity: 0.8;
-  }
-  80% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(2.2);
-    transform: scale(2.2);
-    opacity: 0;
-  }
-}
-@keyframes ping {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-    opacity: 0.8;
-  }
-  80% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(2.2);
-    transform: scale(2.2);
-    opacity: 0;
-  }
-}
-
 .experience-contact-background {
   margin-top: 3.5rem;
   background: url('./assets/consultancy/experi-contact.png') no-repeat center center/cover;
@@ -1153,7 +1099,6 @@
 }
 .consultancy_showcase-para {
   font-size: 19px;
-  letter-spacing: 0.2px;
   font-weight: 400;
   position: relative;
   line-height: 1.8rem;
@@ -1180,81 +1125,6 @@
   right: 0;
 }
 
-.consult__Card {
-  width: 160px;
-  height: 220px;
-  padding: 2px;
-  border-radius: 5px;
-  /* background-image: -o-linear-gradient(#fff, #fff), -o-radial-gradient(top left, circle, #84fab0, #8fd3f4);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), radial-gradient(circle at top left, #84fab0, #8fd3f4);
-  background-image: linear-gradient(#fff, #fff), radial-gradient(circle at top left, #84fab0, #8fd3f4);
-  background-origin: border-box;
-  background-clip: content-box, border-box; */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.consult__Title {
-  text-transform: uppercase;
-  color: #2b2b2b;
-  text-align: center;
-  font-size: 18px;
-}
-.cc__youth__dev,
-.cc__strength,
-.cc__fitnessEn,
-.cc__physioTest,
-.cc__physioMon,
-.cc__runningMech,
-.cc_coachMent,
-.cc_baseSuper,
-.cc_researchSuper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  position: absolute;
-  padding: 0.5rem;
-}
-
-.cc__youth__dev {
-  background: url('./assets/consultancy/YouthDevelopment.png');
-}
-.cc__strength {
-  background: url('./assets/consultancy/StrengthPower.png');
-}
-.cc__fitnessEn {
-  background: url('./assets/consultancy/FitnessEnhance.png');
-}
-.cc__physioTest {
-  background: url('./assets/consultancy/PhysiologicalTest.png');
-}
-.cc__physioMon {
-  background: url('./assets/consultancy/PhysiologicalMon.png');
-}
-.cc__runningMech {
-  background: url('./assets/consultancy/RunningMech.png');
-}
-.cc_coachMent {
-  background: url('./assets/consultancy/CoachMentor.png');
-}
-.cc_baseSuper {
-  background: url('./assets/consultancy/BasesSuper.png');
-}
-.cc_researchSuper {
-  background: url('./assets/consultancy/ResearchSuper.png');
-}
 .consult__LinksButton1 {
   margin: 0 0 2rem 0;
   padding: 1rem 1.5rem;
@@ -1290,36 +1160,77 @@
   transition: 0.5s;
 }
 
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-gap: 0.8rem;
+  max-width: 100%;
+  min-width: 375px;
+  padding: 1rem;
+}
+.list-column {
+  display: flex;
+  flex-flow: column wrap;
+  list-style-type: none;
+}
+.list-item-h {
+  font-size: 0.9375rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.list-item-s {
+  font-size: 0.9rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 .consult-background {
-  margin-top: 3.5rem;
-  background: url('./assets/consultancy/consult-contact-mobile.png') no-repeat center center/cover;
-  height: 550px;
-  background-position-y: 10%;
+  background: url('./assets/consultancy/consultancyContact-mobile.png') no-repeat center center/cover;
+  height: 750px;
+  background-color: #010101;
+  background-position-y: -50%;
 }
 
 .contact__container {
   min-width: 310px;
   max-width: 960px;
   padding: 2.5rem 0.5rem;
-  height: 430px;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .contact__h1 {
   margin: 2rem 15px;
-  font-size: 40px;
+  font-size: 32px;
   max-width: 360px;
   text-align: start;
   color: #fff;
   word-spacing: 5px;
-  font-weight: 800;
+  font-weight: 600;
+}
+.contact__cta-container {
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
 }
 .contact__h3 {
-  margin: 2rem 15px;
-  font-size: 20px;
-  text-transform: uppercase;
+  padding: 1.2rem 0;
+  font-size: 28px;
   text-align: start;
   color: #fff;
   word-spacing: 5px;
-  font-weight: 800;
+  font-weight: 600;
+}
+.consultancy__contact-cta {
+  padding: 1.2rem 0;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+  display: block;
 }
 
 #fs-frm-inputs {
@@ -1494,12 +1405,12 @@
   }
 
   .flex__ContainerServices {
-    max-width: 799px;
+    width: 100%;
   }
-  .consult__Card {
-    width: 200px;
-    height: 260px;
+  .services {
+    grid-gap: 2rem;
   }
+
   .consultancy_background-showcase {
     background: url('./assets/consultancy/consultancyPara.png') no-repeat center center/cover;
   }
@@ -1823,7 +1734,8 @@
     margin: 0 auto;
   }
   .consultancy_showcase-para::after {
-    top: 95px;
+    top: 130px;
+    right: 125px;
   }
   .consultancy_showcase-para {
     line-height: 2rem;
@@ -1840,61 +1752,6 @@
   }
   #fs-frm {
     padding-top: 1rem;
-  }
-
-  .consult__Card,
-  .consult__Card:hover {
-    overflow: hidden;
-  }
-  .cc__youth__dev,
-  .cc__strength,
-  .cc__fitnessEn,
-  .cc__physioTest,
-  .cc__physioMon,
-  .cc__runningMech,
-  .cc_coachMent,
-  .cc_baseSuper,
-  .cc_researchSuper {
-    transition: linear 0.3s transform;
-  }
-  .consult__Title {
-    transition: linear 0.3s transform;
-  }
-  .cc__youth__dev:hover,
-  .cc__strength:hover,
-  .cc__fitnessEn:hover,
-  .cc__physioTest:hover,
-  .cc__physioMon:hover,
-  .cc__runningMech:hover,
-  .cc_coachMent:hover,
-  .cc_baseSuper:hover,
-  .cc_researchSuper:hover {
-    transform: scale(1.1);
-  }
-  .cc__youth__dev:hover > .consult__Title,
-  .cc__strength:hover > .consult__Title,
-  .cc__fitnessEn:hover > .consult__Title,
-  .cc__physioTest:hover > .consult__Title,
-  .cc__physioMon:hover > .consult__Title,
-  .cc__runningMech:hover > .consult__Title,
-  .cc_coachMent:hover > .consult__Title,
-  .cc_baseSuper:hover > .consult__Title,
-  .cc_researchSuper:hover > .consult__Title {
-    transform: scale(0.9);
-  }
-
-  .contact__container {
-    margin-left: auto;
-    margin-right: auto;
-    height: 400px;
-  }
-  .consult__Contact {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    width: 15rem;
-    margin: 2rem auto;
-    text-align: center;
   }
 
   .btn {
@@ -2014,6 +1871,24 @@
   }
   .back-to-top-container > a > .fas {
     font-size: 50px;
+  }
+  .flex__ContainerServices {
+    width: 1000px;
+    flex-direction: row;
+  }
+
+  .services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .consult-background {
+    height: 550px;
+  }
+  .contact__h3 {
+    font-size: 32px;
+    width: 230px;
+  }
+  .contact__container {
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 769px) {
